@@ -4,6 +4,7 @@ ARG YARN_PKG_MANAGER="this.packageManager=\"yarn@1.22.22\""
 ARG BUN_PKG_MANAGER="this.packageManager=\"bun@${BUN_VERSION}\""
 FROM debian:bullseye-slim AS build-bun
 ARG BUN_VERSION
+ARG SERVICE=typebot-builder
 RUN apt-get update -qq \
     && apt-get install -qq --no-install-recommends \
     ca-certificates \
